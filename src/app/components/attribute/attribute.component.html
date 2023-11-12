@@ -1,0 +1,13 @@
+<h1>ATTRIBUTE</h1>
+
+<h2>Ng Class</h2>
+<div class="badge" [ngClass]="{'badge-red': classColor, 'badge-green': !classColor}">
+  Item Badge
+</div>
+<button (click)="changeClass()">Change class</button>
+
+<h2>Ng Style</h2>
+<div class='circle' [ngStyle]="{'background-color': styleColor ? 'blue' : 'orange'}">
+  20
+</div>
+<button (click)="changeStyle()">Change class</button>

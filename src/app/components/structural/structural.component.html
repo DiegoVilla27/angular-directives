@@ -1,0 +1,19 @@
+<h1>STRUCTURALS</h1>
+
+<H2>Ng If, Else</H2>
+<pre>{{'{'}} flag: {{flag}} {{'}'}}</pre><button (click)="flag = !flag">Change flag</button>
+<p *ngIf='flag; else description'>Render only if flag is true</p>
+<ng-template #description><p>Render only if flag is false</p></ng-template>
+
+<h2>Ng For</h2>
+<ul>
+  <li *ngFor='let item of list; index as i'>{{item + ' ' + (i+1)}}</li>
+</ul>
+
+<h2>Ng Switch</h2>
+<pre>{{'{'}} color: {{color}} {{'}'}}</pre><button (click)="changeColor()">Change color</button>
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'green'"><p>Color Green</p></div>
+  <div *ngSwitchCase="'blue'"><p>Color Blue</p></div>
+  <div *ngSwitchDefault><p>Color None</p></div>
+</div>
